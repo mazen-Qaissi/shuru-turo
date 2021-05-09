@@ -1,0 +1,24 @@
+{
+  "mazen": {
+    "id": "mazen",
+    "start_date": "10-10-10110",
+    "duration": 5,
+    "price": 12000,
+    "guide": {
+      "name": "mmm",
+      "cellular": "05050505",
+      "email": "mazen@post.jce.ac.il"
+    }
+  },
+  "mazen1": {
+    "id": "mazen1",
+    "start_date": "10-10-1010",
+    "duration": 5,
+    "price": 12000,
+    "guide": {
+      "name": "mmm",
+      "cellular": "05050505",
+      "email": "mazen@post.jce.ac.il"
+    }
+  }
+}
