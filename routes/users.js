@@ -33,29 +33,28 @@ const writeFile = (
     callback();
   });
 };
-let arr =[]
-let tours0 = []
+let arr = [];
+let tours0 = [];
 module.exports = {
   //READ
-  getTours : function (req, res) {
+  getTours: function (req, res) {
     fs.readFile(dataPath, "utf8", (err, data) => {
       if (err) {
         console.log(err);
         res.sendStatus(500);
-      } else{
-        let data0 =JSON.parse(data)
+      } else {
+        let data0 = JSON.parse(data);
         for (key in data0) {
-          arr.push(key)
+          arr.push(key);
         }
         arr.sort();
-        for (let i =0;i<arr.length;i++) {
-          tours0.push(data0[arr[i]])
+        for (let i = 0; i < arr.length; i++) {
+          tours0.push(data0[arr[i]]);
         }
         res.send(tours0);
-      } 
+      }
     });
-  },
-  // CREATE
+  },// CREATE
   createTour: function (req, res) {
     readFile((data) => {
       // add the new Tour
@@ -96,10 +95,6 @@ module.exports = {
         if (req.body.start_date != undefined) {
           data[tourId].start_date = req.body.start_date;
         }
-        // if (req.body.id != undefined) {
-
-        //     res.send("error canot update the id");
-        // }
         if (req.body.duration != undefined) {
           data[tourId].duration = req.body.duration;
         }
@@ -230,6 +225,27 @@ module.exports = {
         }
       } else {
         res.send(" error id not found to delete");
+      }
+    }, true);
+  },
+  getTour: function (req, res) {
+    readFile((data) => {
+      // add the new user
+      let flag = false;
+      const tourId = req.params["id"];
+      if (tourId == undefined) {
+        flag == false;
+      }
+      for (item in data) {
+        if (item == tourId) {
+          flag = true;
+          break;
+        }
+      }
+      if (flag) {
+        res.send(data[tourId]);
+      } else {
+        res.send("error id not found to getTour");
       }
     }, true);
   },
