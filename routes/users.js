@@ -33,7 +33,8 @@ const writeFile = (
     callback();
   });
 };
-
+let arr =[]
+let tours0 = []
 module.exports = {
   //READ
   getTours : function (req, res) {
@@ -42,7 +43,15 @@ module.exports = {
         console.log(err);
         res.sendStatus(500);
       } else{
-        res.send(JSON.parse(data));
+        let data0 =JSON.parse(data)
+        for (key in data0) {
+          arr.push(key)
+        }
+        arr.sort();
+        for (let i =0;i<arr.length;i++) {
+          tours0.push(data0[arr[i]])
+        }
+        res.send(tours0);
       } 
     });
   },

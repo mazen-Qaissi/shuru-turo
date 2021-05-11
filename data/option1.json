@@ -1,6 +1,6 @@
 {
-  "mazen": {
-    "id": "mazen",
+  "mezen": {
+    "id": "mezen",
     "start_date": "10-10-10110",
     "duration": 5,
     "price": 12000,
@@ -8,7 +8,17 @@
       "name": "mmm",
       "cellular": "05050505",
       "email": "mazen@post.jce.ac.il"
-    }
+    },
+    "path": [
+      {
+        "name": "Pizza",
+        "country": "France"
+      },
+      {
+        "name": "mahmoud",
+        "country": "jer"
+      }
+    ]
   },
   "mazen1": {
     "id": "mazen1",
@@ -19,6 +29,7 @@
       "name": "mmm",
       "cellular": "05050505",
       "email": "mazen@post.jce.ac.il"
-    }
+    },
+    "path": []
   }
 }
