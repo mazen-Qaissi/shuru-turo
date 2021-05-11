@@ -33,12 +33,13 @@ const writeFile = (
     callback();
   });
 };
-let arr = [];
-let tours0 = [];
+
 module.exports = {
   //READ
   getTours: function (req, res) {
     fs.readFile(dataPath, "utf8", (err, data) => {
+      let arr = [];
+      let tours0 = [];
       if (err) {
         console.log(err);
         res.sendStatus(500);
@@ -54,10 +55,12 @@ module.exports = {
         res.send(tours0);
       }
     });
-  },// CREATE
+  }, // CREATE
   createTour: function (req, res) {
     readFile((data) => {
       // add the new Tour
+      // let kk=JSON.parse(req.body)
+      console.log(req.body);
       if (
         !req.body.id ||
         !req.body.start_date ||
