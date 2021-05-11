@@ -8,11 +8,14 @@ router.get('/', (req, res) => {
 });
 
 //CRUD - create read update delete
-router.get('/tours', userRoutes.read_users); //read
+
 router.post('/createTour', userRoutes.createTour); //create
 router.put('/updateTour/:id', userRoutes.updateTour); //update
-router.delete('/deleteTour/:id', userRoutes.deleteTour); //delete
-router.post('/createSiteInPath/:id', userRoutes.createSiteInPath);
-router.delete('/deletePath/:id',userRoutes.deleteSite)
+router.post('/createSiteInPath/:id', userRoutes.createSiteInPath); //createSiteInPath
+router.get('/getTour/:id', userRoutes.getTour); //get Tour using id
+router.get('/getTours', userRoutes.getTours); //get all tours
+router.delete('/deleteSite/:id', userRoutes.deleteSite) //deleteSite
+router.delete('/deleteTour/:id', userRoutes.deleteTour); //deleteTour
+
 
 module.exports = router;

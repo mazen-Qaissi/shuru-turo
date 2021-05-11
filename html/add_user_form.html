@@ -1,62 +1,69 @@
 <!-- index.html -->
 <!doctype html>
 <html>
+
 <head>
     <title>ADD user</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <!-- load bootstrap via CDN -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
-    "></script> <!-- load jquery via CDN -->
+    "></script>
+    <!-- load jquery via CDN -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
     <script src="/js/user_utils.js">
-    </script> <!-- load our javascript file -->
+    </script>
+    <!-- load our javascript file -->
 </head>
 
 <body>
     <div class="col-sm-6 col-sm-offset-3">
 
-        <h1>add new user</h1>
+        <h1>Add new Tour</h1>
 
         <!-- OUR FORM -->
-        <form id="user_form" name="user_form" method="POST">
-
-            <!-- NAME -->
-            <div id="name-group" class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" name="name" id="username" placeholder="write name here"
-                    required>
-                <!-- errors will go here -->
-            </div>
-
+        <form id="Tour_form" name="Tour_form" method="POST">
             <!-- ID -->
             <div id="name-group" class="form-group">
-                <label for="id">ID</label>
-                <input type="text" class="form-control" name="id_field" id="id_field" placeholder="write id here"
-                    required>
+                <label for="id">ID:</label>
+                <input type="text" class="form-control" name="id_field" id="id_field" placeholder="write id here" required>
+                <!-- errors will go here -->
+            </div>
+            <!-- NAME -->
+            <div id="name-group" class="form-group">
+                <label for="name">start_date:</label>
+                <input type="date" class="form-control" name="date_field" id="date_field" placeholder="write date here" required>
                 <!-- errors will go here -->
             </div>
 
             <!-- password -->
             <div id="name-group" class="form-group">
-                <label for="password">password</label>
-                <input type="password" class="form-control" name="password" id="password"
-                    placeholder="write password here" required>
+                <label for="password">Duration:</label>
+                <input type="number" class="form-control" name="duration_field" id="duration_field" placeholder="write duration here" required>
                 <!-- errors will go here -->
             </div>
 
 
             <!-- profession -->
             <div id="name-group" class="form-group">
-                <label for="profession">profession</label>
-                <input type="text" class="form-control" name="profession" id="profession"
-                    placeholder="write profession here">
+                <label for="profession">Price:</label>
+                <input type="number" class="form-control" name="price_field" id="price_field" placeholder="write price here" required>
                 <!-- errors will go here -->
             </div>
 
+            <div id="email-group" class="form-group">
+                <label for="email">Name:</label>
+                <input type="text" class="form-control" name="name_field" id="name_field" placeholder="write guide name here" required>
+                <!-- errors will go here -->
+            </div>
             <!-- EMAIL -->
             <div id="email-group" class="form-group">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" name="email" placeholder="rudd@avengers.com">
+                <label for="email">Emai:</label>
+                <input type="email" class="form-control" name="email_field" id="email_field" placeholder="write email here" re>
+                <!-- errors will go here -->
+            </div>
+            <div id="email-group" class="form-group">
+                <label for="email">Cellular:</label>
+                <input type="tel" class="form-control" name="tel_field" id="tel_field" placeholder="write cellular here" required>
                 <!-- errors will go here -->
             </div>
 
